@@ -15,9 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Book Mart",
-  icons: {
-    icon: "/public/logo.png",
-  },
+  description: "A book borrowing website built with Next.js and Better Auth",
+  
 
 };
 

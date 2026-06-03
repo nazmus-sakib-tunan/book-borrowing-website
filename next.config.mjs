@@ -4,9 +4,8 @@ const nextConfig = {
     domains: ['images.unsplash.com'],
   },
   experimental: {
- serverComponentsExternalPackages: ['@better-auth/kysely-adapter'],
-  },
-  
+serverComponentsExternalPackages: ['@better-auth/kysely-adapter'],
+},
 
 };
 
