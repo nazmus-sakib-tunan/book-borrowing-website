@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "The Lost Horizon",
+    "author": "James Hilton",
+    "description": "A group of travelers discover a mysterious hidden valley in the Himalayas.",
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://images.unsplash.com/photo-1520962922320-2038eebab146?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 2,
+    "title": "Deep Space Mysteries",
+    "author": "Arthur C. Clarke",
+    "description": "Exploration of unknown phenomena in the far reaches of space.",
+    "category": "Science",
+    "available_quantity": 8,
+    "image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 3,
+    "title": "JavaScript Essentials",
+    "author": "Kyle Simpson",
+    "description": "A complete guide to modern JavaScript programming concepts.",
+    "category": "Tech",
+    "available_quantity": 20,
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 4,
+    "title": "The Silent River",
+    "author": "Paulo Coelho",
+    "description": "A poetic journey of self-discovery along a mysterious river.",
+    "category": "Story",
+    "available_quantity": 15,
+    "image_url": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 5,
+    "title": "Quantum Reality",
+    "author": "Brian Greene",
+    "description": "An introduction to quantum physics and its strange implications.",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 6,
+    "title": "React in Action",
+    "author": "Mark Tielens Thomas",
+    "description": "Practical guide to building modern web applications using React.",
+    "category": "Tech",
+    "available_quantity": 18,
+    "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 7,
+    "title": "The Forgotten Kingdom",
+    "author": "Ken Follett",
+    "description": "An epic historical story of a fallen kingdom and its legacy.",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 8,
+    "title": "Artificial Intelligence Basics",
+    "author": "Stuart Russell",
+    "description": "Fundamentals of AI, machine learning, and intelligent systems.",
+    "category": "Tech",
+    "available_quantity": 14,
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 9,
+    "title": "The Human Brain",
+    "author": "David Eagleman",
+    "description": "A scientific look into how the human brain processes information.",
+    "category": "Science",
+    "available_quantity": 11,
+    "image_url": "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 10,
+    "title": "Journey to the East",
+    "author": "Hermann Hesse",
+    "description": "A spiritual story of exploration and enlightenment.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 11,
+    "title": "Node.js Mastery",
+    "author": "Pedro Teixeira",
+    "description": "Advanced concepts for building scalable backend applications.",
+    "category": "Tech",
+    "available_quantity": 16,
+    "image_url": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 12,
+    "title": "Cosmic Evolution",
+    "author": "Carl Sagan",
+    "description": "The story of how the universe evolved from the Big Bang.",
+    "category": "Science",
+    "available_quantity": 13,
+    "image_url": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 13,
+    "title": "The Last Voyage",
+    "author": "Ernest Hemingway",
+    "description": "A gripping tale of survival at sea.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 14,
+    "title": "Database Design Principles",
+    "author": "C.J. Date",
+    "description": "Core principles and best practices for database architecture.",
+    "category": "Tech",
+    "available_quantity": 17,
+    "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 15,
+    "title": "Physics of Everyday Life",
+    "author": "Lawrence Krauss",
+    "description": "Explains how physics governs everyday phenomena around us.",
+    "category": "Science",
+    "available_quantity": 12,
+    "image_url": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80"
+  }
+]
