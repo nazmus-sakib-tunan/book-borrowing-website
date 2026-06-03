@@ -29,7 +29,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
     <Link href="/auth/signup" className="btn rounded-2xl btn-primary">
-      Login
+      SignUp
     </Link>
   </div>
 </div>

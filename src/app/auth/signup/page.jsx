@@ -16,12 +16,21 @@ const SignUpPage = () => {
     const { data, error} = await authClient.signUp.email({
       name: userData.name,
       email: userData.email,
-      password: userData.password
+      password: userData.password,
+      callbackURL: '/'
     })
 
     console.log("Sign up response:", { data, error });
+
+    if (error) {
+    alert("Error signing up: " + error.message);
+  }
+  if (data) {
+    alert("Sign up successful! Please check your email to verify your account.");
+  }
   };
 
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
