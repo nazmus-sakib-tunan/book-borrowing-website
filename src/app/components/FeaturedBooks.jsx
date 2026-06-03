@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const FeaturedBooks = async ({books}) => {
 
@@ -33,9 +34,7 @@ const FeaturedBooks = async ({books}) => {
             </p>
 
             <div className="mt-auto flex justify-end">
-              <button className="btn btn-primary w-full transition-all duration-300 hover:scale-[1.03]">
-                View Details
-              </button>
+              <Link className="btn btn-primary w-full transition-all duration-300 hover:scale-[1.03]" href={`/books/${book.id}`}><button >View Details</button></Link>
             </div>
           </div>
         </div>

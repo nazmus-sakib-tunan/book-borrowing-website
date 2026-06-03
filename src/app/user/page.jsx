@@ -18,13 +18,14 @@ const UserPage = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-4">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-4 ">
       
       {/* Profile Card */}
-      <div className="flex flex-col items-center p-6 shadow-lg rounded-xl bg-white w-80">
+      <div className="flex flex-col items-center p-6 shadow-lg rounded-xl bg-emerald-100 w-80 border
+       border-gray-200 ">
         
         {/* Profile Image / Avatar */}
-        <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center text-2xl font-bold">
+        <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-2xl font-bold">
           {user.name?.charAt(0).toUpperCase()}
         </div>
 

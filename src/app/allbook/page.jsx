@@ -1,13 +1,28 @@
-import Image from "next/image";
 
-const FeaturedBooks = async ({books}) => {
+import Image from "next/image";
+import Link from "next/link";
+
+
+
+
+
+const AllBooksPage = async () => {
 
   const res = await fetch('http://localhost:3000/book.json');
-  const data = await res.json();
-  return (
-     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-15">
+  const bookData = await res.json();
+  
 
-      {data.map((book) => (
+  
+  
+
+  
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mt-15">
+      
+      
+    
+
+      {bookData.map((book) => (
         <div
           key={book.id}
           className="card bg-base-100 shadow-xl rounded-2xl overflow-hidden h-full group "
@@ -33,9 +48,9 @@ const FeaturedBooks = async ({books}) => {
             </p>
 
             <div className="mt-auto flex justify-end">
-              <button className="btn btn-primary w-full transition-all duration-300 hover:scale-[1.03]">
-                View Details
-              </button>
+              
+                <Link className="btn btn-primary w-full transition-all duration-300 hover:scale-[1.03]" href={`/books/${book.id}`}><button >View Details</button></Link>
+              
             </div>
           </div>
         </div>
@@ -45,4 +60,4 @@ const FeaturedBooks = async ({books}) => {
   );
 };
 
-export default FeaturedBooks;
+export default AllBooksPage;

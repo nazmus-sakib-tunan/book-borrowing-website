@@ -44,10 +44,21 @@ const Navbar = () => {
       <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
         {user.name?.charAt(0).toUpperCase()}
       </div>
-      <p className="font-medium">Hi, {user.name}</p>
-    </Link>
+      <p className="font-medium">Hi, {user.name}!</p>
+            </Link>
+            
 
-    {/* Signout */}
+            {/* Signout */}
+             <button
+                      className="btn btn-error font-semibold rounded-full"
+                      
+                      onClick={() => {
+                        signOut();
+                        router.push("/");
+                      }}
+                    >
+                      Sign Out
+                    </button>
     
   </div>: <><Link href="/auth/signup" className="btn rounded-2xl btn-primary">
       SignUp
