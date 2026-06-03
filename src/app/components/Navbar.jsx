@@ -5,9 +5,7 @@ import Link from "next/link";
 const Navbar = () => {
 
   const { data, isPending } = useSession();
-  if (isPending) {
-    return <div>Loading...</div>;
-  }
+  
   console.log("Session data in Navbar:", data);
   const user =data?.user;
 
@@ -49,7 +47,7 @@ const Navbar = () => {
             
 
             {/* Signout */}
-             <button
+            <button
                       className="btn btn-error font-semibold rounded-full"
                       
                       onClick={() => {

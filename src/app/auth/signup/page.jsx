@@ -4,10 +4,19 @@ import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 
 import Link from "next/link";
+import { toast, ToastContainer } from "react-toastify";
+const handleClick = () => {
+      toast("signup successfull!");
+    }
+
 
 const SignUpPage = () => {
 
-  const onSubmit = async(e) => {
+  const onSubmit = async (e) => {
+
+    
+    
+    
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
@@ -28,12 +37,15 @@ const SignUpPage = () => {
     alert("Error signing up: " + error.message);
   }
   if (data) {
-    alert("Sign up successful! Please check your email to verify your account.");
+   handleClick();
     }
     if (!error) {
   window.location.href = "/";
-}
+    }
+    
+    
   };
+
 
   
 
@@ -99,13 +111,17 @@ const SignUpPage = () => {
         <FieldError />
       </TextField>
       <div className="flex gap-2">
-        <Button type="submit">
+        <Button  onClick={handleClick} type="submit">
           <Check />
           Submit
-        </Button>
-        <Button type="reset" variant="secondary">
+          </Button>
+          <ToastContainer/>
+          <Button  type="reset" variant="secondary">
           Reset
-        </Button>
+          </Button>
+          
+          
+
         </div>
         <div className="text-sm text-gray-600  mx-auto">
           Already have an account?{" "}

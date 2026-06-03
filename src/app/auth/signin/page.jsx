@@ -3,6 +3,11 @@ import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import Link from "next/link";
+import { toast, ToastContainer } from "react-toastify";
+
+const handleClick = () => {
+      toast("signup successfull!");
+    }
 
 const signinPage = () => {
 
@@ -29,7 +34,7 @@ const signinPage = () => {
       <h1 className="mx-auto text-3xl font-semibold text-blue-500  ">SignIn</h1>
       {/* name */}
 
-     
+    
 
       <TextField
         isRequired
@@ -70,10 +75,11 @@ const signinPage = () => {
         <FieldError />
       </TextField>
       <div className="flex gap-2">
-        <Button type="submit">
+        <Button  onClick={handleClick} type="submit">
           <Check />
           Submit
-        </Button>
+          </Button>
+          <ToastContainer/>
         <Button type="reset" variant="secondary">
           Reset
         </Button>
