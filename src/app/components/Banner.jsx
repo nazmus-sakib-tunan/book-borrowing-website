@@ -27,7 +27,7 @@ const Banner = () => {
               </Button>
             </Link>
 
-            <Link href="/pricing">
+            <Link href="/auth/signup">
               <Button  className="text-white bg-linear-to-r from-orange-400 to-red-500  bg-red-500 btn rounded-full">
                 Join Free
               </Button>

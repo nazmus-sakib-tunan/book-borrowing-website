@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
+
 import Link from "next/link";
 
 const SignUpPage = () => {
@@ -17,6 +18,7 @@ const SignUpPage = () => {
       name: userData.name,
       email: userData.email,
       password: userData.password,
+      rememberMe: true,
       callbackURL: '/'
     })
 
@@ -27,15 +29,19 @@ const SignUpPage = () => {
   }
   if (data) {
     alert("Sign up successful! Please check your email to verify your account.");
-  }
+    }
+    if (!error) {
+  window.location.href = "/";
+}
   };
 
   
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
-      <Form className="flex w-96 flex-col gap-4 mx-auto mt-10 p-6 border rounded-lg shadow-md border-gray-200" onSubmit={onSubmit}>
       
+      <Form className="flex w-96 flex-col gap-4 mx-auto mt-10 p-6 border rounded-lg shadow-md border-gray-200" onSubmit={onSubmit}>
+      <h1 className="mx-auto text-3xl font-semibold text-blue-500  ">SignUp</h1>
       {/* name */}
 
       <TextField

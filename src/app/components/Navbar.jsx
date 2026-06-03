@@ -1,7 +1,16 @@
-
+'use client';
+import { signOut, useSession } from "@/lib/auth-client";
 import Link from "next/link";
 
 const Navbar = () => {
+
+  const { data, isPending } = useSession();
+  if (isPending) {
+    return <div>Loading...</div>;
+  }
+  console.log("Session data in Navbar:", data);
+  const user =data?.user;
+
   return (
     <div className=" fixed w-full top-0 z-50 bg-white shadow-md">
       <div className="navbar bg-base-100 shadow-sm ">
@@ -14,7 +23,7 @@ const Navbar = () => {
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><Link href="/">Home</Link></li>
-        <li><Link href="/allBook">All Books</Link></li>
+        <li><Link href="/allbook">All Books</Link></li>
         
       </ul>
     </div>
@@ -23,16 +32,31 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link href="/">Home</Link></li>
-      <li><Link href="/allBook">All Books</Link></li>
+      <li><Link href="/allbook">All Books</Link></li>
       
     </ul>
   </div>
-  <div className="navbar-end">
-    <Link href="/auth/signup" className="btn rounded-2xl btn-primary">
-      SignUp
+        <div className="navbar-end ">
+          {user ? <div className="flex items-center gap-3">
+    
+    {/* Profile Link */}
+    <Link href="/user" className="flex items-center gap-2">
+      <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+        {user.name?.charAt(0).toUpperCase()}
+      </div>
+      <p className="font-medium">Hi, {user.name}</p>
     </Link>
+
+    {/* Signout */}
+    
+  </div>: <><Link href="/auth/signup" className="btn rounded-2xl btn-primary">
+      SignUp
+        </Link>
+        </>}
+    
   </div>
-</div>
+      </div>
+     
    </div>
   );
 };

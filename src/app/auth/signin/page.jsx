@@ -26,7 +26,7 @@ const signinPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
       <Form className="flex w-96 flex-col gap-4 mx-auto mt-10 p-6 border rounded-lg shadow-md border-gray-200" onSubmit={onSubmit}>
-      
+      <h1 className="mx-auto text-3xl font-semibold text-blue-500  ">SignIn</h1>
       {/* name */}
 
      
@@ -78,12 +78,7 @@ const signinPage = () => {
           Reset
         </Button>
         </div>
-        <div className="text-sm text-gray-600  mx-auto">
-          Already have an account?{" "}
-          <Link href="/auth/signin" className="text-blue-500 hover:underline">
-            Sign In
-          </Link>
-        </div>
+        
     </Form>
     </div>
   );
