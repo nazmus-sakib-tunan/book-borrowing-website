@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const { data, isPending } = useSession();
   
-  console.log("Session data in Navbar:", data);
+  
   const user =data?.user;
 
   return (
