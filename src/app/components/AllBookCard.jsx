@@ -1,9 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-
-const AllBookCard = async ({ books }) => {
+const AllBookCard = async () => {
   
+  const res = await fetch(
+    "https://book-borrowing-server-w81l.onrender.com/books",
+    { cache: "no-store" }
+  );
+
+  const books = await res.json();
+
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
@@ -18,10 +24,10 @@ const AllBookCard = async ({ books }) => {
                   <Image
                     src={book.image_url}
                     alt={book.title}
-                     fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-              loading="eager"
-                  priority
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="eager"
+                    priority
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </figure>
@@ -37,10 +43,11 @@ const AllBookCard = async ({ books }) => {
                   </p>
       
                   <div className="mt-auto flex justify-end">
-                    <Link href={`/viewdetails/${book.id}`} className="btn btn-primary">
-                    <button className="btn btn-primary w-full transition-all duration-300 hover:scale-[1.03]">
-                      View Details
-                    </button></Link>
+                    <Link href={`/viewdetails/${book.id}`}>
+                      <button className="btn btn-primary w-full transition-all duration-300 hover:scale-[1.03]">
+                        View Details
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
