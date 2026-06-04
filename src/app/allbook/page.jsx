@@ -9,7 +9,10 @@ import BooksClient from "../components/BooksClient";
 
 const AllBooksPage = async () => {
 
-  const res = await fetch('http://localhost:3000/book.json');
+  const res = await fetch(
+    "https://book-borrowing-server-w81l.onrender.com/books",
+    { cache: "no-store" }
+  );
   const bookData = await res.json();
   
 
