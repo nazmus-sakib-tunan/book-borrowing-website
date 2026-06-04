@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee';
 
 const MarqueeCard = async () => {
   
-  const res = await fetch('http://localhost:3000/catagory.json');
+  const res = await fetch( `https://book-borrowing-server-w81l.onrender.com/categories`);
 
   const data = await res.json();
   return (

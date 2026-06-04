@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const FeaturedBooks = async ({books}) => {
 
-  const res = await fetch('http://localhost:3000/book.json');
+  const res = await fetch(`https://book-borrowing-server-w81l.onrender.com/books`);
   const data = await res.json();
   return (
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
@@ -18,7 +18,10 @@ const FeaturedBooks = async ({books}) => {
             <Image
               src={book.image_url}
               alt={book.title}
-              fill
+               fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+              loading="eager"
+  priority
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
           </figure>
